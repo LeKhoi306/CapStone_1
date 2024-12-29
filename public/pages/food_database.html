@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodCalo - Admin Panel</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        height: 100vh;
+    }
+    
+    .sidebar {
+        width: 200px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+    }
+    
+    .sidebar h1 {
+        font-size: 18px;
+        color: #4a4aff;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+    
+    .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    
+    .sidebar ul li a:hover {
+        color: #4a4aff;
+    }
+    
+    .main-content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .main-content h2 {
+        color: #4a4aff;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    
+    .actions a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #007bff;
+    }
+    
+    .actions a:hover {
+        text-decoration: underline;
+    }
+    
+    .scrollable {
+        max-height: 400px;
+        overflow-y: auto;
+    }</style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>FoodCalo</h1>
+        <ul>
+            <li><a href="./user_management.html">User Management</a></li>
+            <li><a href="#">Food Database</a></li>
+            <li><a href="./Diet_plan.html">Diet Plan</a></li>
+            <li><a href="./Subscription.html">Subscription</a></li>
+            <li><a href="./feedback_ratings.html">Feedback and Ratings</a></li>
+            <li><a href="./noti.html">Notification</a></li>
+            <li><a href="./payment.html">Payment</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h2>Food Database</h2>
+        <div class="scrollable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Nutritional Content</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chicken Breast</td>
+                        <td>Protein: 31g, Calories: 165</td>
+                        <td>Protein</td>
+                        <td class="actions">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Broccoli</td>
+                        <td>Fiber: 2.6g, Calories: 55</td>
+                        <td>Vegetable</td>
+                        <td class="actions">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Brown Rice</td>
+                        <td>Carbs: 23g, Calories: 110</td>
+                        <td>Carbohydrate</td>
+                        <td class="actions">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Salmon</td>
+                        <td>Protein: 25g, Calories: 206</td>
+                        <td>Protein</td>
+                        <td class="actions">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Almonds</td>
+                        <td>Fat: 14g, Calories: 160</td>
+                        <td>Healthy Fat</td>
+                        <td class="actions">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

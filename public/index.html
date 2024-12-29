@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodCalo - Member Login</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 360px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .password-container input {
+    flex-grow: 1;
+}
+
+.container .password-container .toggle-visibility {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.container .forgot-password {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.container .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.container button a{
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.container .social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .social-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+}
+
+.container .social-login button img {
+    height: 16px;
+    width: 16px;
+}
+
+.container .footer {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.container .footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.container .footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Member Login</h2>
+        <input type="email" placeholder="Email Address">
+        <div class="password-container">
+            <input type="password" placeholder="Password">
+            <span class="toggle-visibility">👁️</span>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button><a href="./pages/user_management.html">Log in</a></button>
+        <p>or</p>
+        <div class="social-login">
+            <button><img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google"> Continue with Google</button>
+            <button><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"> Continue with Facebook</button>
+        </div>
+        <div class="footer">
+            Not a member yet? <a href="./signup.html">Sign up now!</a>
+        </div>
+    </div>
+    <script type="module" src="js/firebase-config.js"></script>
+</body>
+</html>
