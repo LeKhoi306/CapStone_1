@@ -139,7 +139,10 @@ class LoginScreen extends StatelessWidget {
                   const Text("Not a member yet?"),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      );
                     }, // Add navigation to Sign Up page
                     child: const Text("Sign up now!", style: TextStyle(color: Colors.blue)),
                   ),

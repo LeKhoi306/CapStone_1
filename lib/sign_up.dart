@@ -124,7 +124,10 @@ class SignUpScreen extends StatelessWidget {
                   const Text("Already have an account?"),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context); // Navigate back to Login page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FoodCaloApp()),
+                      ); // Navigate back to Login page
                     },
                     child: const Text("Log in now!", style: TextStyle(color: Colors.blue)),
                   ),
