@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
-import 'sign_in.dart';
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+import 'package:food_calo/sign_up.dart';
+import 'home.dart';
+import 'sign_up.dart';
+void main() => runApp(FoodCaloApp());
+
+class FoodCaloApp extends StatelessWidget {
+  const FoodCaloApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
+    );
+  }
+}
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +31,12 @@ class SignUpScreen extends StatelessWidget {
         ),
         actions: [
           TextButton(
-            onPressed: () {
-              Navigator.pop(context); // Navigate back to Login page
-            },
+            onPressed: () {}, // Add navigation to Login page
             child: const Text("Log In", style: TextStyle(color: Colors.blue)),
+          ),
+          TextButton(
+            onPressed: () {}, // Add navigation to Sign Up page
+            child: const Text("Sign Up", style: TextStyle(color: Colors.blue)),
           ),
         ],
       ),
@@ -36,17 +54,9 @@ class SignUpScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
-                        "Create Account",
+                        "Member Login",
                         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 20),
-                      const TextField(
-                        decoration: InputDecoration(
-                          labelText: "Full Name",
-                          border: OutlineInputBorder(),
-                          prefixIcon: Icon(Icons.person),
-                        ),
                       ),
                       const SizedBox(height: 20),
                       const TextField(
@@ -66,26 +76,31 @@ class SignUpScreen extends StatelessWidget {
                           suffixIcon: Icon(Icons.visibility_off),
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      const TextField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          labelText: "Confirm Password",
-                          border: OutlineInputBorder(),
-                          prefixIcon: Icon(Icons.lock),
-                          suffixIcon: Icon(Icons.visibility_off),
+                      const SizedBox(height: 10),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          onPressed: () {}, // Add forgot password logic
+                          child: const Text(
+                            "Forgot password?",
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       ElevatedButton(
                         onPressed: () {
-                          // Add sign-up logic
-                        },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        }, // Add login logic
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                           padding: const EdgeInsets.symmetric(vertical: 15),
                         ),
-                        child: const Text("Sign Up", style: TextStyle(fontSize: 18)),
+
+                          child: const Text("Log in", style: TextStyle(fontSize: 18)),
                       ),
                       const SizedBox(height: 20),
                       const Center(
@@ -93,25 +108,25 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton.icon(
-                        onPressed: () {}, // Add Google sign-up logic
+                        onPressed: () {}, // Add Google login logic
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                           side: const BorderSide(color: Colors.grey),
                           padding: const EdgeInsets.symmetric(vertical: 12),
                         ),
                         icon: const Icon(Icons.g_mobiledata, color: Colors.red),
-                        label: const Text("Sign up with Google", style: TextStyle(color: Colors.black)),
+                        label: const Text("Continue with Google", style: TextStyle(color: Colors.black)),
                       ),
                       const SizedBox(height: 10),
                       ElevatedButton.icon(
-                        onPressed: () {}, // Add Facebook sign-up logic
+                        onPressed: () {}, // Add Facebook login logic
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                           side: const BorderSide(color: Colors.grey),
                           padding: const EdgeInsets.symmetric(vertical: 12),
                         ),
                         icon: const Icon(Icons.facebook, color: Colors.blue),
-                        label: const Text("Sign up with Facebook", style: TextStyle(color: Colors.black)),
+                        label: const Text("Continue with Facebook", style: TextStyle(color: Colors.black)),
                       ),
                     ],
                   ),
@@ -121,12 +136,12 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Already have an account?"),
+                  const Text("Not a member yet?"),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context); // Navigate back to Login page
-                    },
-                    child: const Text("Log in now!", style: TextStyle(color: Colors.blue)),
+                      Navigator.pop(context);
+                    }, // Add navigation to Sign Up page
+                    child: const Text("Sign up now!", style: TextStyle(color: Colors.blue)),
                   ),
                 ],
               ),

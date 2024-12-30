@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'home.dart';  // Đảm bảo bạn đã import các trang khác
-import 'sign_up.dart';
+import 'sign_in.dart';
 import 'pages/goals.dart';
 import 'pages/food.dart';
 import 'pages/exercise.dart';
 import 'pages/report.dart';
 import 'pages/profile.dart';
+import 'sign_up.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Food Calo',
-      initialRoute: '/signup',
+      initialRoute: '/signin',
       routes: {
-        '/signup': (context) => FoodCaloApp(),
+        '/signin': (context) => const FoodCaloApp(),
+        'signup': (context) => const SignUpScreen(),
         '/home': (context) => HomePage(),
         '/goals': (context) => Goals(),
         '/food': (context) => FoodPage(),
